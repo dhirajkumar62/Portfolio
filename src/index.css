@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+/* Nova Core theme tokens */
+:root {
+  /* Light Mode */
+  --bg: #FAFAFA;
+  --surface: #FFFFFF;
+  --text: #111827;
+  --muted: #4B5563;
+  --accent-primary: #E11D48;
+  --accent-secondary: #4F46E5;
+  --accent-hover: #BE123C;
+  --success: #10B981;
+}
+
+html.dark {
+  /* Dark Mode */
+  --bg: #0B0C10;
+  --surface: #161821;
+  --text: #F3F4F6;
+  --muted: #9CA3AF;
+  --accent-primary: #FF4D6D;
+  --accent-secondary: #6366F1;
+  --accent-hover: #FF2A54;
+  --success: #10B981;
+}
+
+/* full-height */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-heading {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Base Headings */
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+}
+
+/* Background Gradients for Dark Mode */
+html.dark body {
+  background:
+    radial-gradient(1200px 600px at 10% 10%, rgba(99, 102, 241, 0.05), transparent 8%),
+    radial-gradient(1000px 700px at 90% 80%, rgba(255, 77, 109, 0.04), transparent 8%),
+    var(--bg);
+}
+
+/* neon text gradient */
+.neon-text {
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  /* Fallback for older browsers instead of text-fill-color */
+}
+
+/* subtle glow helpers */
+.glow {
+  box-shadow: 0 8px 40px rgba(255, 77, 109, 0.06), 0 2px 8px rgba(99, 102, 241, 0.06);
+}
+
+/* glass panel */
+.glass {
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  /* very soft border */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+html.dark .glass {
+  background: rgba(22, 24, 33, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* neon button */
+.btn-neon {
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  color: #fff;
+  /* White text on buttons is standard for punchy accents */
+  transition: transform 160ms ease, box-shadow 160ms ease;
+  border-radius: 12px;
+}
+
+.btn-neon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 77, 109, 0.2);
+}
+
+/* bento card hover */
+.bento-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  border-radius: 16px;
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 77, 109, 0.3);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+html.dark .bento-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* card tilt (for projects) */
+.card-tilt {
+  transition: transform 250ms cubic-bezier(.2, .9, .3, 1), box-shadow 250ms;
+}
+
+.card-tilt:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+html.dark .card-tilt:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* focus visible */
+:focus {
+  outline: 2px solid var(--accent-secondary);
+  outline-offset: 2px;
+}
+
+/* small utilities */
+.text-muted {
+  color: var(--muted);
+}
+
+.bg-card {
+  background: var(--surface);
+}
+
+/* Animated Gradient Orb */
+.orb-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  filter: blur(120px);
+  border-radius: 50%;
+  opacity: 0.15;
+  animation: breathe 8s infinite alternate ease-in-out;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes breathe {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.15;
+  }
+
+  100% {
+    transform: scale(1.1) translate(20px, -20px);
+    opacity: 0.25;
+  }
+}
