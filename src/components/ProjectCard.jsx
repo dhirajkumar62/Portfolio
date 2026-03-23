@@ -9,7 +9,7 @@ export default function ProjectCard({ p }) {
       transition={{ type: "spring", stiffness: 300 }}
     >
       {/* Image */}
-      <div className="h-48 bg-black/5 overflow-hidden relative">
+      <div className="w-full h-48 shrink-0 bg-black/5 overflow-hidden relative">
         <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
         <img src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
       </div>

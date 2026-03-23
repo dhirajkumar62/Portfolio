@@ -11,6 +11,8 @@ import CertificationsPage from './pages/CertificationsPage';
 import EducationPage from './pages/EducationPage';
 import AchievementsPage from './pages/AchievementsPage';
 import TrainingPage from './pages/TrainingPage';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function App() {
   const [theme, setTheme] = useState(() => {
@@ -57,6 +59,7 @@ export default function App() {
       </main>
 
       <Footer />
+      <ToastContainer position="bottom-right" theme={theme} />
     </div>
   );
 }

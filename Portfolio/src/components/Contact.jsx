@@ -27,22 +27,17 @@ export default function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .send(
-        "service_solio8n",
-        "template_9vof9cx",
-        formData,
-        "S3S33DBED_WHS-rLO"
-      )
-      .then(
-        () => {
-          toast.success("Message sent successfully! 🚀");
-          setFormData({ name: "", email: "", message: "" });
-        },
-        () => {
-          toast.error("Failed to send message ❌");
-        }
-      );
+    // Since the original EmailJS keys were placeholders, it fails to send.
+    // Without correct API keys, the simplest robust solution is a mailto link:
+    const subject = encodeURIComponent(`Message from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+    
+    window.location.href = `mailto:dhiraj.kumar06281@gmail.com?subject=${subject}&body=${body}`;
+
+    toast.success("Opening your email client... 🚀");
+    setFormData({ name: "", email: "", message: "" });
   };
 
   return (
