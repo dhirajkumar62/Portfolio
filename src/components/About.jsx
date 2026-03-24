@@ -4,7 +4,7 @@ import { FaDownload, FaAward, FaBriefcase, FaUser, FaMapMarkerAlt, FaEnvelope, F
 
 // Import your profile image. 
 // Vite will automatically optimize this and add a unique hash during build so it always updates safely!
-import profileImg from "../assets/profile.jpeg";
+import profileImg from "../assets/profile.jpg";
 
 export default function About() {
   return (
