@@ -2,6 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaDownload, FaAward, FaBriefcase, FaUser, FaMapMarkerAlt, FaEnvelope, FaLaptopCode } from "react-icons/fa";
 
+// Import your profile image. 
+// Vite will automatically optimize this and add a unique hash during build so it always updates safely!
+import profileImg from "../assets/profile.jpeg";
+
 export default function About() {
   return (
     <section id="about" className="py-20 relative z-10">
@@ -22,7 +26,7 @@ export default function About() {
             {/* Profile Image */}
             <div className="w-32 h-32 rounded-2xl overflow-hidden ring-2 ring-[var(--accent-primary)]/20 shadow-lg mb-6">
               <img
-                src="https://images.pexels.com/photos/2955376/pexels-photo-2955376.jpeg"
+                src={profileImg}
                 alt="Dhiraj"
                 className="w-full h-full object-cover"
               />
