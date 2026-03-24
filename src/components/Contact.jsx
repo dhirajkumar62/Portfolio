@@ -54,12 +54,22 @@ export default function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="text-3xl font-extrabold mb-10 neon-text text-center font-heading tracking-wide"
+        className="text-3xl font-extrabold mb-4 neon-text text-center font-heading tracking-wide"
       >
         Contact Me
         <div className="w-24 h-[3px] mx-auto mt-2 bg-gradient-to-r 
         from-[var(--accent-primary)] to-[var(--accent-secondary)] rounded-full"></div>
       </motion.h2>
+
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-center text-muted max-w-2xl mx-auto mb-10"
+      >
+        You can send a message directly to me by filling out the contact form.
+      </motion.p>
 
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
 
