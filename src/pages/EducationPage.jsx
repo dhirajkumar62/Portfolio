@@ -7,7 +7,7 @@ export default function EducationPage() {
     {
       school: "Lovely Professional University, Punjab",
       degree: "B.Tech in Computer Science & Engineering",
-      score: "CGPA: 7.23",
+      score: "CGPA: 7.26",
       year: "2023 - Present",
       link: "https://www.lpu.in",
       logo: "https://www.lpu.in/lpu-assets/images/logo/lpu-seal.svg"
@@ -40,7 +40,7 @@ export default function EducationPage() {
         className="text-3xl font-extrabold neon-text text-center mb-14"
       >
         Education
-                <div className="w-24 h-[3px] mx-auto mt-2 bg-gradient-to-r from-[#00F5D4] to-[#7C3AED] rounded-full"></div>
+        <div className="w-24 h-[3px] mx-auto mt-2 bg-gradient-to-r from-[#00F5D4] to-[#7C3AED] rounded-full"></div>
 
       </motion.h2>
 
