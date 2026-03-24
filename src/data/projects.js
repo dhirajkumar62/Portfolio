@@ -10,7 +10,7 @@ export const projects = [
       "Developed encrypted QR-based hall-ticket verification improving security by 25%.",
       "Reduced manual validation errors by 15% with standardized workflows.",
     ],
-    live: "#",  // replace with real link
+    
     repo: "https://github.com/dhirajkumar62/SEAP-", // replace with actual repo
   },
   {
@@ -24,7 +24,7 @@ export const projects = [
       "Integrated automated alerting for early issue detection by 22%.",
       "Optimized process tracking pipeline reducing downtime by 18%.",
     ],
-    live: "#", // replace with real link
+    
     repo: "https://github.com/dhirajkumar62", // replace with actual repo
   },
   {
@@ -38,7 +38,7 @@ export const projects = [
     "Developed personalized learning roadmaps and real-time AI mentor using Gemini API boosting guidance efficiency by 24%.",
     "Implemented AI-driven resume and portfolio generator with JWT authentication improving productivity by 20%.",
   ],
-  live: "#", // replace with deployed link
+
   repo: "https://github.com/dhirajkumar62/CareerMind", // replace with actual repo link
 }
 ];

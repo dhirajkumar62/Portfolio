@@ -43,18 +43,11 @@ export default function ProjectCard({ p }) {
         {/* Buttons */}
         <div className="mt-6 flex gap-3 pt-4 border-t border-[var(--muted)]/10">
           <a
-            href={p.live}
-            target="_blank"
-            className="btn-neon px-5 py-2 rounded-lg text-sm font-semibold flex-1 text-center"
-          >
-            Live Site
-          </a>
-          <a
             href={p.repo}
             target="_blank"
             className="px-5 py-2 rounded-lg border border-[var(--muted)]/30 hover:border-[var(--accent-primary)] hover:text-[var(--accent-primary)] transition text-sm font-medium flex-1 text-center bg-white/5"
           >
-            Code
+            GitHub
           </a>
         </div>
       </div>
