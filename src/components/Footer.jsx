@@ -65,14 +65,7 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-white/10 my-6"></div>
 
-        {/* BOTTOM SECTION */}
-        <p className="text-center text-xs text-muted">
-          © {new Date().getFullYear()} • Built with ❤️ by <span className="neon-text">Dhiraj Kumar</span>
-        </p>
-
-        <p className="text-center text-xs text-muted mt-1">
-          Deployed on Vercel • Designed with React, Tailwind & Framer Motion
-        </p>
+       
       </div>
 
       {/* BACK TO TOP BUTTON */}
