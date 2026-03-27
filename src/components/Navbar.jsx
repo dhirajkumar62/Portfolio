@@ -109,7 +109,7 @@ export default function Navbar({ theme, setTheme }) {
 
           {/* Resume Button */}
           <a
-            href="https://drive.google.com/file/d/1gXIYmDxeJQeBV0qZDtAbBEg4XZS_0A1o/view?usp=drive_link"
+            href="https://drive.google.com/file/d/12dZueTrhuJC9Qd5NUEDxtJtHZeEMcCpQ/view?usp=drive_link"
             download
             className="px-4 py-2 rounded-lg border border-[var(--accent-primary)]/40 
             hover:bg-[var(--accent-primary)]/10 text-[var(--accent-primary)] transition text-sm font-medium"

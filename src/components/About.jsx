@@ -60,7 +60,7 @@ export default function About() {
           {/* Buttons */}
           <div className="mt-8 w-full flex flex-col gap-3">
             <a
-              href="https://drive.google.com/file/d/1gXIYmDxeJQeBV0qZDtAbBEg4XZS_0A1o/view?usp=drive_link"
+              href="https://drive.google.com/file/d/12dZueTrhuJC9Qd5NUEDxtJtHZeEMcCpQ/view?usp=drive_link"
               download
               className="btn-neon w-full flex justify-center items-center gap-2 px-4 py-3 text-sm font-semibold"
             >
