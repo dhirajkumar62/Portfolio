@@ -34,14 +34,7 @@ export default function Hero() {
             View My Work
           </a>
 
-          <a
-            href="https://drive.google.com/file/d/1gXIYmDxeJQeBV0qZDtAbBEg4XZS_0A1o/view?usp=drive_link"
-            download
-            className="inline-block px-7 py-3.5 rounded-xl border border-[var(--muted)]/30 hover:border-[var(--accent-primary)] 
-            hover:text-[var(--accent-primary)] transition text-sm md:text-base font-medium bg-white/5 backdrop-blur-sm"
-          >
-            Download Resume
-          </a>
+         
         </div>
       </motion.div>
     </section>
