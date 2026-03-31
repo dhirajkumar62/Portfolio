@@ -12,9 +12,12 @@ import {
   FaDatabase,
   FaGithub,
   FaPhp,
-  FaLanguage,
-  FaJava
-  } from "react-icons/fa";
+  FaJava,
+  FaBrain,
+  FaClock,
+  FaSyncAlt,
+  FaBalanceScale
+} from "react-icons/fa";
 
 import {
   SiTailwindcss,
@@ -30,8 +33,8 @@ const skillGroups = [
   {
     title: "Frontend",
     skills: [
-        { name: "HTML", icon: <FaHtml5 />, color: "#E44D26" },
-        { name: "CSS", icon: <FaCss3Alt />, color: "#1572B6" },
+      { name: "HTML", icon: <FaHtml5 />, color: "#E44D26" },
+      { name: "CSS", icon: <FaCss3Alt />, color: "#1572B6" },
       { name: "React", icon: <FaReact />, color: "#61DBFB" },
       { name: "Tailwind", icon: <SiTailwindcss />, color: "#38BDF8" },
       { name: "JavaScript", icon: <FaJs />, color: "#F7DF1E" },
@@ -62,7 +65,7 @@ const skillGroups = [
       { name: "C++", icon: <SiCplusplus />, color: "#004482" },
       { name: "JavaScript", icon: <FaJs />, color: "#F7DF1E" },
       { name: "Java", icon: <FaJava />, color: "#EA2D2E" },
-    { name: "Python", icon: <SiPython />, color: "#3776AB" }
+      { name: "Python", icon: <SiPython />, color: "#3776AB" },
     ],
   },
 
@@ -75,14 +78,16 @@ const skillGroups = [
       { name: "Vite", icon: <SiVite />, color: "#A56BFF" },
     ],
   },
-  {
-  title: "Languages",
-  skills: [
-    { name: "English", icon: <FaLanguage />, color: "#00F5D4" },
-    { name: "Hindi", icon: <FaLanguage />, color: "#7C3AED" },
-  ],
-},
 
+  {
+    title: "Soft Skills",
+    skills: [
+      { name: "Problem Solving", icon: <FaBrain />, color: "#FF6B6B" },
+      { name: "Time Manage\u00ADment", icon: <FaClock />, color: "#4ECDC4" },
+      { name: "Adapta\u00ADbility", icon: <FaSyncAlt />, color: "#FFD93D" },
+      { name: "Decision Making", icon: <FaBalanceScale />, color: "#6C5CE7" },
+    ],
+  },
 ];
 
 export default function Skills() {
@@ -96,8 +101,7 @@ export default function Skills() {
         className="text-3xl font-extrabold mb-10 neon-text text-center"
       >
         Skills
-                <div className="w-24 h-[3px] mx-auto mt-2 bg-gradient-to-r from-[#00F5D4] to-[#7C3AED] rounded-full"></div>
-
+        <div className="w-24 h-[3px] mx-auto mt-2 bg-gradient-to-r from-[#00F5D4] to-[#7C3AED] rounded-full"></div>
       </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -114,15 +118,22 @@ export default function Skills() {
               {group.title}
             </h3>
 
-            <div className="grid grid-cols-2 gap-4">
+            {/* 🔥 FIXED GRID */}
+            <div
+              className={`grid gap-4 ${group.title === "Soft Skills"
+                  ? "grid-cols-2 justify-items-center"
+                  : "grid-cols-2"
+                }`}
+            >
               {group.skills.map((skill) => (
                 <motion.div
                   key={skill.name}
                   whileHover={{ scale: 1.07 }}
-                  className="flex items-center gap-3 p-3 rounded-xl bg-white/2 border border-white/10 card-tilt cursor-pointer"
+                  className={`flex items-center gap-3 p-3 rounded-xl bg-white/2 border border-white/10 card-tilt cursor-pointer h-full ${group.title === "Soft Skills" ? "w-full max-w-[170px]" : "w-full"
+                    }`}
                 >
                   <div
-                    className="text-2xl"
+                    className="text-2xl shrink-0"
                     style={{
                       color: skill.color,
                       filter: "drop-shadow(0 0 6px rgba(255,255,255,0.25))",
@@ -131,9 +142,15 @@ export default function Skills() {
                     {skill.icon}
                   </div>
 
-                  <div className="flex flex-col">
-                    <span className="font-medium">{skill.name}</span>
-                    <span className="text-xs text-muted">Experienced</span>
+                  <div className="flex flex-col flex-1 min-w-0">
+                    <span className="font-medium text-sm leading-tight">
+                      {skill.name}
+                    </span>
+                    <span className="text-[10px] sm:text-xs text-muted mt-1">
+                      {group.title === "Soft Skills"
+                        ? "Core Strength"
+                        : "Experienced"}
+                    </span>
                   </div>
                 </motion.div>
               ))}
