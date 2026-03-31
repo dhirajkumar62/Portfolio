@@ -14,6 +14,7 @@ import {
   FaPhp,
   FaJava,
   FaBrain,
+   FaServer,
   FaClock,
   FaSyncAlt,
   FaBalanceScale
@@ -21,6 +22,7 @@ import {
 
 import {
   SiTailwindcss,
+    SiExpress,
   SiVite,
   SiMysql,
   SiMongodb,
@@ -46,6 +48,8 @@ const skillGroups = [
     skills: [
       { name: "Node.js", icon: <FaNodeJs />, color: "#3C873A" },
       { name: "PHP", icon: <FaPhp />, color: "#777BB4" },
+       { name: "Express.js", icon: <SiExpress />, color: "#ffffff" },
+       { name: "REST APIs", icon: <FaServer />, color: "#00ADB5" },
     ],
   },
 
