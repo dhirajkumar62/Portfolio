@@ -74,9 +74,10 @@ export default function About() {
           {/* Buttons */}
           <div className="mt-6 flex gap-3">
             <a
-              href="https://drive.google.com/file/d/1gXIYmDxeJQeBV0qZDtAbBEg4XZS_0A1o/view?usp=drive_link"
-              download
-              className="btn-neon inline-flex items-center gap-2 px-4 py-2 text-black bg-gradient-to-r from-[#00F5D4]/20 to-[#7C3AED]/20 border border-white/10 rounded-lg text-sm"
+              href="https://drive.google.com/file/d/1tBnrwAIU_23acIeLEjDyugIwVgiL_bl7/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+              className="btn-neon w-full flex justify-center items-center gap-2 px-4 py-3 text-sm font-semibold"
             >
               <FaDownload /> Resume
             </a>

@@ -109,10 +109,11 @@ export default function Navbar({ theme, setTheme }) {
 
           {/* Resume Button */}
           <a
-            href="https://drive.google.com/file/d/1gXIYmDxeJQeBV0qZDtAbBEg4XZS_0A1o/view?usp=drive_link"
-            download
-            className="px-4 py-2 rounded-lg border border-[#00F5D4]/40 
-            hover:bg-[#00F5D4]/20 hover:text-white transition text-sm"
+            href="https://drive.google.com/file/d/1tBnrwAIU_23acIeLEjDyugIwVgiL_bl7/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+            className="px-4 py-2 rounded-lg border border-(--accent-primary)/40 
+            hover:bg-(--accent-primary)/10 text-(--accent-primary) transition text-sm font-medium"
           >
             CV
           </a>
