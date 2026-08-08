@@ -28,17 +28,17 @@ export const projects = [
     repo: "https://github.com/dhirajkumar62", // replace with actual repo
   },
   {
-  id: 3,
-  title: "CareerMinds – AI Career Guidance Platform",
-  desc: "An AI-powered platform that analyzes user skills and interests to recommend optimal career paths, generate resumes, and provide real-time mentorship.",
-  img: "https://img.freepik.com/free-vector/career-guidance-concept-illustration_114360-7986.jpg", // you can change image
-  tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Google Gemini API", "JWT"],
-  points: [
-    "Architected AI-based career recommendation system improving decision accuracy by 28%.",
-    "Developed personalized learning roadmaps and real-time AI mentor using Gemini API boosting guidance efficiency by 24%.",
-    "Implemented AI-driven resume and portfolio generator with JWT authentication improving productivity by 20%.",
-  ],
-
-  repo: "https://github.com/dhirajkumar62/CareerMind", // replace with actual repo link
-}
+    id: 3,
+    title: "CareerMinds – AI Career Guidance Platform",
+    desc: "An AI-powered platform that analyzes user skills and interests to recommend optimal career paths, generate resumes, and provide real-time mentorship.",
+    img: "https://img.freepik.com/free-vector/career-guidance-concept-illustration_114360-7986.jpg", // you can change image
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Google Gemini API", "JWT"],
+    points: [
+      "Architected AI-based career recommendation system improving decision accuracy by 28%.",
+      "Developed personalized learning roadmaps and real-time AI mentor using Gemini API boosting guidance efficiency by 24%.",
+      "Implemented AI-driven resume and portfolio generator with JWT authentication improving productivity by 20%.",
+    ],
+    repo: "https://github.com/dhirajkumar62/CareerMind", // replace with actual repo link
+    live: "https://career-mind-zeta.vercel.app/",
+  }
 ];
