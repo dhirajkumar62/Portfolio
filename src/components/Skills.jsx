@@ -9,37 +9,54 @@ import {
   FaCss3Alt,
   FaJs,
   FaGitAlt,
-  FaDatabase,
   FaGithub,
   FaPhp,
   FaJava,
   FaBrain,
-   FaServer,
+  FaServer,
   FaClock,
   FaSyncAlt,
-  FaBalanceScale
+  FaBalanceScale,
+  FaDocker,
+  FaAws,
+  FaLinux,
+  FaNpm,
 } from "react-icons/fa";
 
 import {
   SiTailwindcss,
-    SiExpress,
+  SiExpress,
   SiVite,
   SiMysql,
   SiMongodb,
   SiC,
   SiCplusplus,
-  SiPython
+  SiPython,
+  SiKubernetes,
+  SiJenkins,
+  SiGithubactions,
+  SiNginx,
+  SiTerraform,
+  SiGrafana,
+  SiPrometheus,
+  SiPostman,
+  SiGitlab,
+  SiAnsible,
+  SiApache,
+  SiRedis,
+  SiJsonwebtokens,
 } from "react-icons/si";
 
 const skillGroups = [
   {
     title: "Frontend",
     skills: [
-      { name: "HTML", icon: <FaHtml5 />, color: "#E44D26" },
-      { name: "CSS", icon: <FaCss3Alt />, color: "#1572B6" },
-      { name: "React", icon: <FaReact />, color: "#61DBFB" },
-      { name: "Tailwind", icon: <SiTailwindcss />, color: "#38BDF8" },
+      { name: "HTML5", icon: <FaHtml5 />, color: "#E44D26" },
+      { name: "CSS3", icon: <FaCss3Alt />, color: "#1572B6" },
+      { name: "React.js", icon: <FaReact />, color: "#61DBFB" },
+      { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#38BDF8" },
       { name: "JavaScript", icon: <FaJs />, color: "#F7DF1E" },
+      { name: "Vite", icon: <SiVite />, color: "#A56BFF" },
     ],
   },
 
@@ -47,9 +64,11 @@ const skillGroups = [
     title: "Backend",
     skills: [
       { name: "Node.js", icon: <FaNodeJs />, color: "#3C873A" },
+      { name: "Express.js", icon: <SiExpress />, color: "#FFFFFF" },
       { name: "PHP", icon: <FaPhp />, color: "#777BB4" },
-       { name: "Express.js", icon: <SiExpress />, color: "#ffffff" },
-       { name: "REST APIs", icon: <FaServer />, color: "#00ADB5" },
+      { name: "REST APIs", icon: <FaServer />, color: "#00ADB5" },
+      { name: "JWT Authentication", icon: <SiJsonwebtokens />, color: "#FFFFFF" },
+      { name: "Redis", icon: <SiRedis />, color: "#DC382D" },
     ],
   },
 
@@ -58,6 +77,7 @@ const skillGroups = [
     skills: [
       { name: "MySQL", icon: <SiMysql />, color: "#00618A" },
       { name: "MongoDB", icon: <SiMongodb />, color: "#00ED64" },
+      { name: "Redis", icon: <SiRedis />, color: "#DC382D" },
       { name: "Database Concepts", icon: <FaDatabase />, color: "#AEE2FF" },
     ],
   },
@@ -73,30 +93,80 @@ const skillGroups = [
     ],
   },
 
+  // 🚀 DEVOPS & CLOUD
+  {
+    title: "DevOps & Cloud",
+    skills: [
+      { name: "Docker", icon: <FaDocker />, color: "#2496ED" },
+      { name: "Kubernetes", icon: <SiKubernetes />, color: "#326CE5" },
+      { name: "Jenkins", icon: <SiJenkins />, color: "#D24939" },
+      { name: "AWS", icon: <FaAws />, color: "#FF9900" },
+      { name: "Linux", icon: <FaLinux />, color: "#FCC624" },
+      { name: "Nginx", icon: <SiNginx />, color: "#009639" },
+      { name: "GitHub Actions", icon: <SiGithubactions />, color: "#2088FF" },
+      { name: "Terraform", icon: <SiTerraform />, color: "#7B42BC" },
+      { name: "Ansible", icon: <SiAnsible />, color: "#EE0000" },
+      { name: "CI/CD", icon: <FaSyncAlt />, color: "#00ADB5" },
+    ],
+  },
+
+  // 📊 MONITORING
+  {
+    title: "Monitoring & Observability",
+    skills: [
+      { name: "Prometheus", icon: <SiPrometheus />, color: "#E6522C" },
+      { name: "Grafana", icon: <SiGrafana />, color: "#F46800" },
+      { name: "Nginx", icon: <SiNginx />, color: "#009639" },
+      { name: "Server Monitoring", icon: <FaServer />, color: "#00ADB5" },
+    ],
+  },
+
+  // 🛠️ TOOLS
   {
     title: "Tools",
     skills: [
       { name: "Git", icon: <FaGitAlt />, color: "#F05033" },
       { name: "GitHub", icon: <FaGithub />, color: "#FFFFFF" },
       { name: "VS Code", icon: <VscVscode />, color: "#007ACC" },
-      { name: "Vite", icon: <SiVite />, color: "#A56BFF" },
+      { name: "Postman", icon: <SiPostman />, color: "#FF6C37" },
+      { name: "npm", icon: <FaNpm />, color: "#CB3837" },
+      { name: "GitLab", icon: <SiGitlab />, color: "#FC6D26" },
     ],
   },
 
+  // 🧠 SOFT SKILLS
   {
     title: "Soft Skills",
     skills: [
-      { name: "Problem Solving", icon: <FaBrain />, color: "#FF6B6B" },
-      { name: "Time Manage\u00ADment", icon: <FaClock />, color: "#4ECDC4" },
-      { name: "Adapta\u00ADbility", icon: <FaSyncAlt />, color: "#FFD93D" },
-      { name: "Decision Making", icon: <FaBalanceScale />, color: "#6C5CE7" },
+      {
+        name: "Problem Solving",
+        icon: <FaBrain />,
+        color: "#FF6B6B",
+      },
+      {
+        name: "Time Management",
+        icon: <FaClock />,
+        color: "#4ECDC4",
+      },
+      {
+        name: "Adaptability",
+        icon: <FaSyncAlt />,
+        color: "#FFD93D",
+      },
+      {
+        name: "Decision Making",
+        icon: <FaBalanceScale />,
+        color: "#6C5CE7",
+      },
     ],
   },
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-16">
+    <section className="py-20 px-4" id="skills">
+
+      {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -105,10 +175,11 @@ export default function Skills() {
         className="text-3xl font-extrabold mb-10 neon-text text-center"
       >
         Skills
-        <div className="w-24 h-[3px] mx-auto mt-2 bg-gradient-to-r from-[#00F5D4] to-[#7C3AED] rounded-full"></div>
       </motion.h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      {/* Skill Groups */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
         {skillGroups.map((group) => (
           <motion.div
             key={group.title}
@@ -118,49 +189,71 @@ export default function Skills() {
             transition={{ duration: 0.6 }}
             className="glass p-6 rounded-2xl shadow-neon-sm"
           >
+
+            {/* Group Title */}
             <h3 className="text-xl font-semibold mb-4 neon-text">
               {group.title}
             </h3>
 
-            {/* 🔥 FIXED GRID */}
+            {/* Skills Grid */}
             <div
-              className={`grid gap-4 ${group.title === "Soft Skills"
+              className={`grid gap-4 ${
+                group.title === "Soft Skills"
                   ? "grid-cols-2 justify-items-center"
                   : "grid-cols-2"
-                }`}
+              }`}
             >
+
               {group.skills.map((skill) => (
                 <motion.div
                   key={skill.name}
-                  whileHover={{ scale: 1.07 }}
-                  className={`flex items-center gap-3 p-3 rounded-xl bg-white/2 border border-white/10 card-tilt cursor-pointer h-full ${group.title === "Soft Skills" ? "w-full max-w-[170px]" : "w-full"
+                  whileHover={{
+                    scale: 1.07,
+                    y: -3,
+                  }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className={`flex items-center gap-3 p-3 rounded-xl 
+                    bg-white/5 border border-white/10 
+                    card-tilt cursor-pointer h-full
+                    ${
+                      group.title === "Soft Skills"
+                        ? "w-full max-w-[170px]"
+                        : "w-full"
                     }`}
                 >
+
+                  {/* Icon */}
                   <div
                     className="text-2xl shrink-0"
                     style={{
                       color: skill.color,
-                      filter: "drop-shadow(0 0 6px rgba(255,255,255,0.25))",
+                      filter:
+                        "drop-shadow(0 0 6px rgba(255,255,255,0.25))",
                     }}
                   >
                     {skill.icon}
                   </div>
 
+                  {/* Skill Name */}
                   <div className="flex flex-col flex-1 min-w-0">
                     <span className="font-medium text-sm leading-tight">
                       {skill.name}
                     </span>
+
                     <span className="text-[10px] sm:text-xs text-muted mt-1">
                       {group.title === "Soft Skills"
                         ? "Core Strength"
                         : "Experienced"}
                     </span>
                   </div>
+
                 </motion.div>
               ))}
+
             </div>
           </motion.div>
         ))}
+
       </div>
     </section>
   );
